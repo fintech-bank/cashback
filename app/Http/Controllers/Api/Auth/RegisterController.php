@@ -23,7 +23,7 @@ class RegisterController extends ApiController
                 'customer_fintech_id' => $request->get('customer_id')
             ]);
 
-            return $this->sendSuccess();
+            return $this->sendSuccess(null, ["user" => $user]);
         }catch (Exception $exception) {
             return $this->sendError([$exception]);
         }
