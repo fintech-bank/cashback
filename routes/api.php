@@ -15,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('auth')->group(function () {
-    Route::post('register');
+    Route::post('register', \App\Http\Controllers\Api\Auth\RegisterController::class);
 });
