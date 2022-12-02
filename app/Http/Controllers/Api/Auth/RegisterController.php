@@ -12,6 +12,7 @@ class RegisterController extends ApiController
 {
     public function __invoke(Request $request)
     {
+        dd($request->all());
         try {
             $user = User::create([
                 'civility' => $request->get('civility'),
