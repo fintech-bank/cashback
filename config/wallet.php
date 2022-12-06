@@ -184,9 +184,11 @@ return [
         'model' => Wallet::class,
         'creating' => [],
         'default' => [
-            'name' => 'Default Wallet',
-            'slug' => 'default',
-            'meta' => [],
+            'name' => 'Cashback',
+            'slug' => 'cashback',
+            'meta' => [
+                'limit_withdraw' => 20
+            ],
         ],
     ],
 ];
