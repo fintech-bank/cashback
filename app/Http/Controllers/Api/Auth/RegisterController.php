@@ -23,7 +23,13 @@ class RegisterController extends ApiController
                 'customer_fintech_id' => $request->get('customer_id')
             ]);
 
-            $user->wallet->update(['name' => 'Cashback', 'slug' => 'cashback']);
+            $user->wallet->update([
+                'name' => 'Cashback',
+                'slug' => 'cashback',
+                'meta' => [
+                    'limit_withdraw' => 20
+                ]
+            ]);
 
             return $this->sendSuccess(null, ["user" => $user]);
         }catch (Exception $exception) {
