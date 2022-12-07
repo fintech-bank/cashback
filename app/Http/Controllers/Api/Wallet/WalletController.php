@@ -12,7 +12,11 @@ class WalletController extends ApiController
     public function request(Request $request)
     {
         $user = User::where('customer_fintech_id', $request->get('customer_id'))->first();
+        if($user) {
+            return $this->sendSuccess(null, ['wallet' => $user->wallet, 'balance' => $user->balance]);
+        } else {
+            return $this->sendWarning(null, [])
+        }
 
-        return $this->sendSuccess(null, ['wallet' => $user->wallet, 'balance' => $user->balance]);
     }
 }
