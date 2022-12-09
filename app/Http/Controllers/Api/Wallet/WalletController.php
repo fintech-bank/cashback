@@ -15,7 +15,7 @@ class WalletController extends ApiController
         if($user) {
             return $this->sendSuccess(null, ['wallet' => $user->wallet, 'balance' => $user->balance]);
         } else {
-            return $this->sendWarning(null, [])
+            return $this->sendWarning(null, ["errors" => "GetAccessNotUser"]);
         }
 
     }
