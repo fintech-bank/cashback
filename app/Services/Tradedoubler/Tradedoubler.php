@@ -24,7 +24,7 @@ class Tradedoubler
             'grant_type' => 'password',
             'username' => 'resabiletcse.com',
             'password' => 'CRIDIP85100'
-        ])->body();
+        ])->status();
 
         return $this->access_token;
     }
