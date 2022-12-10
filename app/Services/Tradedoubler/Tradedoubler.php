@@ -24,7 +24,7 @@ class Tradedoubler
             'grant_type' => 'password',
             'username' => 'fintech',
             'password' => 'rbU89a-4'
-        ])->object()->access_token;
+        ])->status();
 
         return $this->access_token;
     }
