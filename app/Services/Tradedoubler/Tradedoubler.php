@@ -18,7 +18,7 @@ class Tradedoubler
 
     /**
      */
-    public function setAccessToken(): string
+    public function setAccessToken()
     {
         $ch = curl_init();
 
@@ -43,6 +43,6 @@ EOT;
         $info = curl_getinfo($ch);
         curl_close($ch);
 
-        return $info;
+        return $response;
     }
 }
