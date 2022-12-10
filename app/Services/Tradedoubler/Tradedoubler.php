@@ -49,6 +49,6 @@ EOT;
             'Authorization' => 'Basic MTJkMjM3ZjgtNjYwZC0zZTM0LTlhMTItOTcwZDRiOTZiMzhjOjI2MTA1ZTRjYjM0OTA2Njg='
         ])->post('https://connect.tradedoubler.com/uaa/oauth/token', ['grant_type' => 'password', 'username' => 'resabiletcse.com', 'password' => 'CRIDIP85100'])->body();
 
-        dd($call, $this->bearer_encode);
+        dd($call);
     }
 }
