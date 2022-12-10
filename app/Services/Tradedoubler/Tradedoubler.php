@@ -20,12 +20,10 @@ class Tradedoubler
      */
     public function setAccessToken(): string
     {
-        $this->access_token = \Http::withToken($this->bearer_encode, 'Basic')->post($this->endpoint.'uaa/oauth/token', [
+        return \Http::withToken($this->bearer_encode, 'Basic')->post($this->endpoint.'uaa/oauth/token', [
             'grant_type' => 'password',
             'username' => 'resabiletcse.com',
             'password' => 'CRIDIP85100'
         ])->object();
-
-        return $this->access_token;
     }
 }
