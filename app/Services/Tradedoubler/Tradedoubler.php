@@ -43,6 +43,6 @@ EOT;
         $info = curl_getinfo($ch);
         curl_close($ch);
 
-        return $response;
+        return json_decode($response);
     }
 }
