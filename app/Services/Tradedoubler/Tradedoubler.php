@@ -47,7 +47,7 @@ EOT;
         $call = \Http::withHeaders([
             'Content-Type' => 'application/x-www-form-urlencoded',
             'Authorization' => 'Basic MTJkMjM3ZjgtNjYwZC0zZTM0LTlhMTItOTcwZDRiOTZiMzhjOjI2MTA1ZTRjYjM0OTA2Njg='
-        ])->post('https://connect.tradedoubler.com/uaa/oauth/token', ['grant_type=password&username=resabiletcse.com&password=CRIDIP85100'])->body();
+        ])->post('https://connect.tradedoubler.com/uaa/oauth/token', ['grant_type' => 'password', 'username' => 'resabiletcse.com', 'password' => 'CRIDIP85100'])->body();
 
         dd($call);
     }
