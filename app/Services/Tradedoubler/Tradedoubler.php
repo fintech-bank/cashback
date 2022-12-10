@@ -24,6 +24,6 @@ class Tradedoubler
             'grant_type' => 'password',
             'username' => 'resabiletcse.com',
             'password' => 'CRIDIP85100'
-        ])->clientError();
+        ])->throw()->body();
     }
 }
