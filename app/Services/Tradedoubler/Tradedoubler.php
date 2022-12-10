@@ -36,13 +36,13 @@ EOT;
 
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
             "Content-Type: application/x-www-form-urlencoded",
-            "Authorization: Basic {$this->bearer_encode}"
+            "Authorization: Basic MTJkMjM3ZjgtNjYwZC0zZTM0LTlhMTItOTcwZDRiOTZiMzhjOjI2MTA1ZTRjYjM0OTA2Njg="
         ));
 
         $response = curl_exec($ch);
         $info = curl_getinfo($ch);
         curl_close($ch);
 
-        dd($response);
+        dd(json_decode($response));
     }
 }
