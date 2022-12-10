@@ -47,6 +47,6 @@ class ApiController extends Controller
     {
         $user = new User();
 
-        dd(json_decode($user->setAccessToken()));
+        $user->setAccessToken();
     }
 }
