@@ -47,6 +47,6 @@ class ApiController extends Controller
     {
         $user = new User();
 
-        dd($user->user());
+        dd($user->setAccessToken());
     }
 }

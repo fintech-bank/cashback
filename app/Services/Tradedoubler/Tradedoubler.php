@@ -18,12 +18,14 @@ class Tradedoubler
 
     /**
      */
-    public function setAccessToken(): void
+    public function setAccessToken(): string
     {
         $this->access_token = \Http::withToken($this->bearer_encode, 'Basic')->post($this->endpoint.'uaa/oauth/token', [
             'grant_type' => 'password',
             'username' => 'fintech',
             'password' => 'rbU89a-4'
         ])->object()->access_token;
+
+        return $this->access_token;
     }
 }
