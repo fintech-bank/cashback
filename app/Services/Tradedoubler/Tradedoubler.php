@@ -36,7 +36,7 @@ EOT;
 
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
             "Content-Type: application/x-www-form-urlencoded",
-            "Authorization: Basic MTJkMjM3ZjgtNjYwZC0zZTM0LTlhMTItOTcwZDRiOTZiMzhjOjI2MTA1ZTRjYjM0OTA2Njg="
+            "Authorization: Basic {$this->bearer_encode}"
         ));
 
         $response = curl_exec($ch);
