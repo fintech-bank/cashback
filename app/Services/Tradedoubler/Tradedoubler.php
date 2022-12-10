@@ -12,7 +12,7 @@ class Tradedoubler
     public function __construct()
     {
         $this->bearer_encode = base64_encode(config('services.tradedoubler.client_id').':'.config('services.tradedoubler.client_secret'));
-        $this->endpoint = "https://private-anon-802578d844-tradedoubler.apiary-mock.com/";
+        $this->endpoint = "https://connect.tradedoubler.com/";
         $this->setAccessToken();
     }
 
