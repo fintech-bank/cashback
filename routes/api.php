@@ -21,3 +21,5 @@ Route::prefix('auth')->group(function () {
 Route::prefix('wallet')->group(function () {
     Route::post('/', [\App\Http\Controllers\Api\Wallet\WalletController::class, 'request']);
 });
+
+Route::get('/test', [\App\Http\Controllers\Api\ApiController::class, 'testing']);

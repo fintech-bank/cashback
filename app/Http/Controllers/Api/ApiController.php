@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Services\Tradedoubler\User;
 
 class ApiController extends Controller
 {
@@ -40,5 +41,12 @@ class ApiController extends Controller
             "data" => $data,
             "state" => "error"
         ], $status);
+    }
+
+    public function testing()
+    {
+        $user = new User();
+
+        dd($user->user());
     }
 }
