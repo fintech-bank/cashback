@@ -43,7 +43,6 @@ EOT;
         $info = curl_getinfo($ch);
         curl_close($ch);
 
-        var_dump($info["http_code"]);
-        return json_decode($response, true);
+        return $response;
     }
 }
